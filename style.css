@@ -1,1 +1,325 @@
+@keyframes button-move {
+    0% {transform: translate(0, 0);}
+    50% {transform: translate(0, -4px);}
+    100%{transform: translate(0, 0);}
+  }
 
+@keyframes button-text-move {
+    0% {transform: translate(0, 0);}
+    50% {transform: translate(0, -6px);}
+    100%{transform: translate(0, 0);}
+  }
+@keyframes button-text-move-right {
+    0% {transform: translate(0, 0);}
+    50% {transform: translate(4px, 0);}
+    100%{transform: translate(0, 0);}
+  }
+
+body{
+    min-height: 100vh;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    padding:0;
+    margin:0;
+    color:#555555;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2{
+font-weight: 500;
+font-size: 20px;
+
+color: #555555;
+
+}
+a{
+    text-decoration: none;
+}
+ul{
+    padding:0;
+}
+li{
+  list-style-type: none;
+}
+button{
+    border:none;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    background: none;
+}
+button:hover{
+    cursor: pointer;
+}
+header{
+    width: 100%;
+    
+    position: fixed;
+    top:0;
+}
+.header-filter-large{
+    height:100vh;
+}
+
+.nav-bar{
+    background: linear-gradient(283.61deg, #E9967A 33.06%, rgba(235, 157, 130, 0.47) 82.94%); 
+    color: #ffffff;
+    display: flex;
+    padding:0;
+    margin:0;
+    box-shadow: inset 0px -4px 4px rgba(85, 85, 85, 0.3);
+    font-size: 20px;
+    font-weight: 500;
+}
+.nav-ul{
+  display: flex;
+  width:900px;                    
+  justify-content: space-between;
+  padding:0;
+    margin:0;
+    align-items: center;
+    height: 50px;
+}
+.nav-li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-btn{
+    color: #ffffff;
+    font-style: normal;
+line-height: 32px;
+width:100%;
+padding-top: 9px;
+padding-bottom: 9px;
+margin-top: 0;
+margin-top: 0;
+}
+
+
+#header-large{
+    flex-direction: column;
+    align-items: center;
+}
+#header-large h1{
+    padding-top:88px;
+    padding-bottom:55px;
+    font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 47px;
+}
+#header-small{
+    justify-content: center;
+}
+.header-content{
+    width:100%;
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    height:84px;
+    padding-right:40px;
+    padding-bottom: 0;
+    padding-left: 40px;
+    align-items: center;
+}
+.header-content h1{
+    text-align: left;
+}
+#header-large h1 b{
+    font-weight: 700;
+font-size: 36px;
+line-height: 47px;
+}
+#header-small h1{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+}
+#header-small h1 b{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+}
+#header-small ul{
+    align-self: flex-end;
+}
+.nav-active{
+    width:200px;
+    height:50px;
+    background: #ffffff;
+    box-shadow: 4px -3px 5px 0px rgba(194, 133, 133, 0.3);
+    border-radius: 10px 10px 0px 0px;
+}
+.nav-active a{
+    color:#FA8072;
+    font-weight: 700;
+}
+
+.filter-bar{
+    width: 100%;
+    background: white;
+    box-shadow: 0px 3px 4px 1px rgba(85, 85, 85, 0.25);
+    display:flex;
+    justify-content: center;
+}
+.filter-bar-large{
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    justify-content: space-between;
+}
+.filter-content{
+    width:100%;
+    max-width: 1000px;
+    padding-left:40px;
+    padding-right: 40px;
+    text-align: left;
+}
+.filter-content-small{
+    display:flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.filter-tag{
+    color:#FA8072;
+    margin-left: 20px;
+    padding: 6px 12px;
+    border: 1px solid #FA8072;
+    border-radius: 6px;
+}
+
+.filter-content-large{
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.filter-content-large > .material-icons-outlined{
+    align-self: center;
+    color: #888888;
+}
+.filter-btn-gp{
+    display: flex; 
+}
+.filter-btns{
+    width: 45%;
+    margin-right:5%;
+}
+.filter-ul{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap:5%;
+    row-gap: 16px;
+}
+.filter-ul li{
+  width:45%;
+  height:41px;
+border: 1px solid #FA8072;
+box-sizing: border-box;
+border-radius: 5px;
+text-align: center;
+}
+
+.filter-btn{
+    width:100%;
+padding-top: 7px;
+padding-bottom: 7px;
+margin:0;
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+color: #FA8072;
+background: none;
+}
+.filter-inactive:hover{
+    box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.25);
+    animation-name: button-move;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.nav-inactive .nav-btn:hover{
+    text-shadow: 1px 4px 12px rgba(0, 0, 0, 0.25);
+    font-weight: 700;
+    animation-name: button-text-move;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.filter-inactive:active{
+    box-shadow: none;
+    animation-name: none;
+   
+}
+.nav-inactive .nav-btn:active{
+    text-shadow: none;
+    animation-name: none;
+}
+.filter-arrow-btn-large{
+    width:100%;
+    height: 50px;
+}
+.filter-arrow-btn-large:hover .arrow-up{
+    animation-name: button-text-move-right;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    font-weight: 700;
+}
+.filter-arrow-btn:hover .filter-content-small .material-icons-outlined{
+    animation-name: button-text-move;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    font-weight: 700;
+}
+.arrow-text{
+display: flex;
+align-items: center;
+justify-content: center;
+column-gap: 12px;
+font-weight:500;
+}
+.filter-arrow-btn .arrow-text{
+  color:#555555;
+}
+.filter-arrow-btn-large .arrow-text{
+    color:#FA8072;
+}
+
+.filter-arrow-btn:hover{
+ background: #eeeeee;
+ transition-duration: 0.5s;
+}
+
+.filter-active{
+    background: #FA8072;
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.filter-active button{
+color:#FFFFFF;
+}
+.filter-bg{
+    background: rgba(233, 233, 233, 0.72);
+    height:100%;
+}
+
+  footer{
+  color: #A09FB1;
+  
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 24px;
+  }
+  
+  footer em{
+  font-style: normal;
+  font-weight: bold;
+  }
+
+  footer a, footer a:visited{
+    color: #333333
+  }

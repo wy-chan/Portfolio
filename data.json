@@ -1,0 +1,206 @@
+{
+    "projects":[
+        {
+            "image":"",
+            "title":"Github Jobs",
+            "demoURL":"https://wy-chan.github.io/devchallenges_GithubJobs/",
+            "codeURL":"https://github.com/wy-chan/devchallenges_GithubJobs",
+            "tag":["All","Responsive","HTML","CSS","JavaScript","React"],
+            "text":"This is a job search page created with the use of an API. The design is from devchallenge.io."
+    },
+        {
+            "image":"",
+            "title":"Weather app",
+            "demoURL":"https://wy-chan.github.io/devchallenges_WeatherApp/",
+            "codeURL":"https://github.com/wy-chan/devchallenges_WeatherApp",
+            "tag":["All","Responsive","HTML","CSS","JavaScript","React"],
+            "text":"This is a weather app created with the use of an API. The design is from devchallenge.io."
+    },
+        {
+            "image":"",
+            "title":"Country Quiz",
+            "demoURL":"https://wy-chan.github.io/devchallenges_CountryQuiz/",
+            "codeURL":"https://github.com/wy-chan/devchallenges_CountryQuiz",
+            "tag":["All","HTML","CSS","JavaScript","React"],
+            "text":"This is a country quiz app created with the use of an API. The design is from devchallenge.io."
+    },
+        {
+            "image":"",
+            "title":"Random Quote Generator",
+            "demoURL":"https://wy-chan.github.io/devchallenges_RandomQuoteGenerator/",
+            "codeURL":"https://github.com/wy-chan/devchallenges_RandomQuoteGenerator",
+            "tag":["All","Responsive","HTML","CSS","JavaScript","jQuery"],
+            "text":"This is a quote generator app. The design is from devchallenge.io."
+    },
+        {
+            "image":"",
+            "title":"Todo App",
+            "demoURL":"https://wy-chan.github.io/devchallenges_TodoApp/",
+            "codeURL":"https://github.com/wy-chan/devchallenges_TodoApp",
+            "tag":["All","HTML","CSS","JavaScript","React"],
+            "text":"This is a todo app following the design given by devchallenge.io."
+    },
+     {
+            "image":"",
+            "title":"Windbnb",
+            "demoURL":"https://wy-chan.github.io/devchallenges_Windbnb/",
+            "codeURL":"https://github.com/wy-chan/devchallenges_Windbnb/",
+            "tag":["All","Responsive","HTML","CSS","JavaScript","jQuery"],
+            "text":"This is a small version of Airbnb - Windbnb with data given by devchallenge.io."
+    },
+        {
+            "image":"",
+            "title":"Input Component",
+            "demoURL":"https://wy-chan.github.io/devchallenges_components/#input",
+            "codeURL":"https://github.com/wy-chan/devchallenges_components/tree/main/input_component",
+            "tag":["All","HTML","CSS","JavaScript","BootStrap","React"],
+            "text":"A page displaying all states of a input component. The design is from devchallenge.io."
+    },
+        {
+            "image":"",
+            "title":"Button Component",
+            "demoURL":"https://wy-chan.github.io/devchallenges_components/#button",
+            "codeURL":"https://github.com/wy-chan/devchallenges_components/tree/main/button_component",
+            "tag":["All","HTML","CSS","JavaScript","BootStrap","React"],
+            "text":"A page displaying all states of a button component. The design is from devchallenge.io."
+    },
+        {
+        "image":"images/screen_profilep1.png",
+        "title":"Portfolio Page",
+        "demoURL":"https://wy-chan.github.io/devchallenges_Portfolio/",
+        "codeURL":"https://github.com/wy-chan/devchallenges_Portfolio/",
+        "tag":["All","Responsive","HTML","CSS","JavaScript","jQuery"],
+        "text":"This is a responsive portfolio page. The design is from devchallenge.io."
+    },
+        {
+        "image":"images/screen_checkoutp.png",
+        "title":"Checkout Page",
+        "demoURL":"https://wy-chan.github.io/devchallenges_CheckoutPage/",
+        "codeURL":"https://github.com/wy-chan/devchallenges_CheckoutPage/",
+        "tag":["All","Responsive","HTML","CSS","JavaScript"],
+        "text":"This is a responsive checkout page. The design is from devchallenge.io"
+    },
+        {
+        "image":"images/screen_ediehomep.png",
+        "title":"Edie Homepage",
+        "demoURL":"https://wy-chan.github.io/devchallenges_EdieHomepage/",
+        "codeURL":"https://github.com/wy-chan/devchallenges_EdieHomepage/",
+        "tag":["All","Responsive","HTML","CSS","JavaScript"],
+        "text":"This is a responsive page. The design is from devchallenge.io"
+    },
+       {
+        "image":"images/screen_mygalleryp.png",
+        "title":"My Gallery",
+        "demoURL":"https://wy-chan.github.io/devchallenges_MyGalleryPage/",
+        "codeURL":"https://github.com/wy-chan/devchallenges_MyGalleryPage/",
+        "tag":["All","Responsive","HTML","CSS"],
+        "text":"This is a responsive gallery page. The design is from devchallenge.io"
+    },
+        {
+        "image":"images/screen_recipep.png",
+        "title":"Recipe Page",
+        "demoURL":"https://wy-chan.github.io/devchallenges_RecipePage/",
+        "codeURL":"https://github.com/wy-chan/devchallenges_RecipePage/",
+        "tag":["All","Responsive","HTML","CSS"],
+        "text":"This is a responsive recipe page. The design is from devchallenge.io"
+    },
+        {
+        "image":"images/screen_interiorconsultantp.png",
+        "title":"Interior Consultant",
+        "demoURL":"https://wy-chan.github.io/devchallenges_InteriorConsultantPage/",
+        "codeURL":"https://github.com/wy-chan/devchallenges_InteriorConsultantPage/",
+        "tag":["All","Responsive","HTML","CSS","JavaScript"],
+        "text":"This is a responsive interior consultant page. The design is from devchallenge.io"
+    },
+       {
+        "image":"images/screen_myteamp.png",
+        "title":"My Team Page",
+        "demoURL":"https://wy-chan.github.io/devchallenges_myteampage/",
+        "codeURL":"https://github.com/wy-chan/devchallenges_myteampage/",
+        "tag":["All","Responsive","HTML","CSS"],
+        "text":"In this project, I work with HTML and CSS to create a responsive page. The design is from devchallenge.io"
+    },
+        {
+        "image":"images/screen_404notfoundp.png",
+        "title":"404 Not Found Page",
+        "demoURL":"https://wy-chan.github.io/devchallenges_404notfoundpage/",
+        "codeURL":"https://github.com/wy-chan/devchallenges_404notfoundpage/",
+        "tag":["All","Responsive","HTML","CSS"],
+        "text":"In this project, I work with HTML and CSS to create a responsive page. The design is from devchallenge.io"
+    }  
+    ],
+    "certificates":[
+        {
+            "title":"Photoshop 2021 Essential Training: The Basics",
+            "organization":"LinkedIn Learning",
+            "certID": "AaYqzgJIixIMaQLc0uUZroYWwkBQ",
+            "date":"25-6-2021",
+            "url":"https://www.linkedin.com/learning/certificates/b33041ca7628e71090b7e4abff202122b8c42dec29ee8268fc3e79faaa2da7c5?trk=share_certificate",
+            "image":"images/cert_lil_ps2021"
+        },
+        {
+            "title":"Illustrator 2021 Essential Training",
+            "organization":"LinkedIn Learning",
+            "certID":"Certificate Id: Ab4ZkqF-rZSCA1PCSJuyM19smHEi",
+            "date":"28-6-2021",
+            "url":"https://www.linkedin.com/learning/certificates/48a6e460c93cff515279cc159695f10d6eec67f6d6106e0aabc84f53589ea5f0?trk=share_certificate",
+            "image":"images/cert_lil_ai2021"
+        },
+        {
+            "title":"Responsive Web Developer",
+            "organization":"devChallenges.io",
+            "certID":"9o0cRPgBFW6PUxBwHzS3",
+            "date":"2-2022",
+            "url":"https://devchallenges.io/certificates/9o0cRPgBFW6PUxBwHzS3",
+            "image":"images/cert_dc_rwd"
+        },
+        {
+            "title":"Front End Developer",
+            "organization":"devChallenges.io",
+            "certID":"T5xTGHabUqa0msEPpssB",
+            "date":"4-2022",
+            "url":"https://devchallenges.io/certificates/T5xTGHabUqa0msEPpssB",
+            "image":"images/cert_dc_fed"
+        },
+        {
+            "title":"Responsive Web Design",
+            "organization":"freeCodeCamp.org",
+            "certID":"",
+            "date":"25-3-2021",
+            "url":"https://www.freecodecamp.org/certification/wy-chan/responsive-web-design",
+            "image":"images/cert_fcc_rwd"
+        },
+        {
+            "title":"JavaScript Algorithms and Data Structures",
+            "organization":"freeCodeCamp.org",
+            "certID":"",
+            "date":"1-5-2021",
+            "url":"https://www.freecodecamp.org/certification/wy-chan/javascript-algorithms-and-data-structures",
+            "image":"images/cert_fcc_js"
+        },
+        {
+            "title":"Front End Development Libraries",
+            "organization":"freeCodeCamp.org",
+            "certID":"",
+            "date":"22-6-2021",
+            "url":"https://www.freecodecamp.org/certification/wy-chan/front-end-development-libraries",
+            "image":"images/cert_fcc_fed"
+        },
+        {
+            "title":"C Certified Entry-Level Programmer",
+            "organization":"C++ Institute",
+            "certID":"pYxS.T5bn.N5w1",
+            "date":"31-10-2020",
+            "url":"https://www.credly.com/badges/d173d27b-73f8-44eb-a390-f15e27fc510b",
+            "image":"images/cert_c_cle"
+        },
+        {
+            "title":"Certified Entry-Level Python Programmer",
+            "organization":"Python Institute",
+            "certID":"pJqU.Bw92.t2x7",
+            "date":"25-10-2020",
+            "url":"https://www.credly.com/badges/36f83975-ef56-4003-b9e3-b73fce521372",
+            "image":"images/cert_python_pcep"
+        }
+    ]
+  }
