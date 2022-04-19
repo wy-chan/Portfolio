@@ -131,12 +131,13 @@
     ],
     "certificates":[
         {
-            "title":"Responsive Web \n Developer",
+            "title":"Responsive Web Developer",
             "organization":"devChallenges.io",
             "certID":"9o0cRPgBFW6PUxBwHzS3",
             "date":"2-2022",
             "url":"https://devchallenges.io/certificates/9o0cRPgBFW6PUxBwHzS3",
-            "image":"images/cert_dc_rwd.png"
+            "image":"images/cert_dc_rwd.png",
+            "type":"development"
         },
         {
             "title":"Front End Developer",
@@ -144,15 +145,17 @@
             "certID":"T5xTGHabUqa0msEPpssB",
             "date":"4-2022",
             "url":"https://devchallenges.io/certificates/T5xTGHabUqa0msEPpssB",
-            "image":"images/cert_dc_fed.png"
+            "image":"images/cert_dc_fed.png",
+            "type":"development"
         },
         {
-            "title":"Photoshop 2021 \n Essential Training: \n The Basics",
+            "title":"Photoshop 2021 Essential \n Training: The Basics",
             "organization":"LinkedIn Learning",
             "certID": "AaYqzgJIixIMaQLc0uUZroYWwkBQ",
             "date":"25-6-2021",
             "url":"https://www.linkedin.com/learning/certificates/b33041ca7628e71090b7e4abff202122b8c42dec29ee8268fc3e79faaa2da7c5?trk=share_certificate",
-            "image":"images/cert_lil_ps2021.png"
+            "image":"images/cert_lil_ps2021.png",
+            "type":"design"
         },
         {
             "title":"Illustrator 2021 \n Essential Training",
@@ -160,7 +163,8 @@
             "certID":"Certificate Id: Ab4ZkqF-rZSCA1PCSJuyM19smHEi",
             "date":"28-6-2021",
             "url":"https://www.linkedin.com/learning/certificates/48a6e460c93cff515279cc159695f10d6eec67f6d6106e0aabc84f53589ea5f0?trk=share_certificate",
-            "image":"images/cert_lil_ai2021.png"
+            "image":"images/cert_lil_ai2021.png",
+            "type":"design"
         },
         {
             "title":"Responsive Web Design",
@@ -168,7 +172,8 @@
             "certID":"",
             "date":"25-3-2021",
             "url":"https://www.freecodecamp.org/certification/wy-chan/responsive-web-design",
-            "image":"images/cert_fcc_rwd.png"
+            "image":"images/cert_fcc_rwd.png",
+            "type":"development"
         },
         {
             "title":"JavaScript Algorithms \n and Data Structures",
@@ -176,7 +181,8 @@
             "certID":"",
             "date":"1-5-2021",
             "url":"https://www.freecodecamp.org/certification/wy-chan/javascript-algorithms-and-data-structures",
-            "image":"images/cert_fcc_js.png"
+            "image":"images/cert_fcc_js.png",
+            "type":"coding"
         },
         {
             "title":"Front End Development Libraries",
@@ -184,7 +190,8 @@
             "certID":"",
             "date":"22-6-2021",
             "url":"https://www.freecodecamp.org/certification/wy-chan/front-end-development-libraries",
-            "image":"images/cert_fcc_fed.png"
+            "image":"images/cert_fcc_fed.png",
+            "type":"development"
         },
         {
             "title":"C Certified Entry-Level Programmer",
@@ -192,15 +199,17 @@
             "certID":"pYxS.T5bn.N5w1",
             "date":"31-10-2020",
             "url":"https://www.credly.com/badges/d173d27b-73f8-44eb-a390-f15e27fc510b",
-            "image":"images/cert_c_cle.png"
+            "image":"images/cert_c_cle.png",
+            "type":"coding"
         },
         {
-            "title":"Certified Entry-Level Python Programmer",
+            "title":"Certified Entry-Level \n Python Programmer",
             "organization":"Python Institute",
             "certID":"pJqU.Bw92.t2x7",
             "date":"25-10-2020",
             "url":"https://www.credly.com/badges/36f83975-ef56-4003-b9e3-b73fce521372",
-            "image":"images/cert_python_pcep.png"
+            "image":"images/cert_python_pcep.png",
+            "type":"coding"
         }
     ]
   }

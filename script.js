@@ -34,9 +34,10 @@ class MyApp extends React.Component{
                 certificates:json.certificates,
                 projectsSorted:json.projects,
             })
-            console.log(this.state.projects);
+            console.log(this.state.certificates)
         });
         window.addEventListener("scroll", this.resizeHeaderOnScroll);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     resizeHeaderOnScroll(){
         const distanceY = window.pageYOffset || document.documentElement.scrollTop,
@@ -360,42 +361,36 @@ class Certificates extends React.Component{
     render(){ 
 
         let data=this.props.certificates;
-        let data1 = this.props.certificates.filter(item => item.organization == "devChallenges.io");
-        let data2 = this.props.certificates.filter(item => item.organization == "LinkedIn Learning");
-        let data3 = this.props.certificates.filter(item => item.organization == "freeCodeCamp.org");
-        let data4 = this.props.certificates.filter(item => item.organization != "devChallenges.io"&&item.organization != "LinkedIn Learning"&&item.organization != "freeCodeCamp.org");
+        let dataDev = this.props.certificates.filter(item => item.type == "development");
+        let dataDesign = this.props.certificates.filter(item => item.type == "design");
+        let dataCode = this.props.certificates.filter(item => item.type == "coding");
+        
 
         return(
             <section id="Certificates">
                 <p className="p-text">My certificates from online courses:</p>
 
-                <h3 className="cert-org">devChallenges.io:</h3>
+                <h3 className="cert-type">Web Development:</h3>
                 <div className="certGroup">
                 {(data[0])?
-                data1.map((item,index)=><li key={index}>{<CertBox certificates={item} />}</li>)
+                dataDev.map((item,index)=><li key={index}>{<CertBox certificates={item} />}</li>)
+                :null}
+                </div>
+                <hr />
+                <h3 className="cert-type">Design:</h3>
+                <div className="certGroup">
+                {(data[0])?
+                dataDesign.map((item,index)=><li key={index}>{<CertBox certificates={item} />}</li>)
+                :null}
+                </div>
+                <hr />
+                <h3 className="cert-type">Coding:</h3>
+                <div className="certGroup">
+                {(data[0])?
+                dataCode.map((item,index)=><li key={index}>{<CertBox certificates={item} />}</li>)
                 :null}
                 </div>
 
-                <h3 className="cert-org">LinkedIn Learning:</h3>
-                <div className="certGroup">
-                {(data[0])?
-                data2.map((item,index)=><li key={index}>{<CertBox certificates={item} />}</li>)
-                :null}
-                </div>
-                
-                <h3 className="cert-org">freeCodeCamp.org:</h3>
-                <div className="certGroup">
-                {(data[0])?
-                data3.map((item,index)=><li key={index}>{<CertBox certificates={item} />}</li>)
-                :null}
-                </div>
-
-                <h3 className="cert-org">Others:</h3>
-                <div className="certGroup">
-                {(data[0])?
-                data4.map((item,index)=><li key={index}>{<CertBox certificates={item} />}</li>)
-                :null}
-                </div>
             </section>
         )
     }
@@ -412,13 +407,17 @@ class CertBox extends React.Component{
             return (<span key={i}>{c}<br/></span>) 
              }):
              "...";
+        let org = (data)? data.organization:"";
         let url = (data)?data["url"]:"...";
         return(
-                <div className="pages-box cert-box">
-                    <div className="pages-box-content cert-box-content">
-                            <img className="pages-img cert-img" src={img}/>
-                        <h3>{title}</h3>
+                <div className="cert-box">
+                    <div className="cert-box-content">
+                            <img className="cert-img" src={img}/>
+                        <div className="cert-box-text">
+                                 <h5>{org}</h5>
+                                 <h4>{title}</h4>
                         <a href={url} target="_blank" className="demo-btn cert-btn">See Certificate</a> 
+                        </div>
                     </div>
                 </div>
         )
