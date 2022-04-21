@@ -363,6 +363,7 @@ class Certificates extends React.Component{
         let data=this.props.certificates;
         let dataDev = this.props.certificates.filter(item => item.type == "development");
         let dataDesign = this.props.certificates.filter(item => item.type == "design");
+        let dataBack = this.props.certificates.filter(item => item.type == "development-backend");
         let dataCode = this.props.certificates.filter(item => item.type == "coding");
         
 
@@ -381,6 +382,13 @@ class Certificates extends React.Component{
                 <div className="certGroup">
                 {(data[0])?
                 dataDesign.map((item,index)=><li key={index}>{<CertBox certificates={item} />}</li>)
+                :null}
+                </div> 
+                <hr />
+                <h3 className="cert-type">Back End:</h3>
+                <div className="certGroup">
+                {(data[0])?
+                dataBack.map((item,index)=><li key={index}>{<CertBox certificates={item} />}</li>)
                 :null}
                 </div>
                 <hr />
