@@ -1,6 +1,14 @@
 {
     "projects":[
         {
+            "image":"images/screen_exercisetracker.png",
+            "title":"Exercise Tracker",
+            "demoURL":"https://boilerplate-project-exercisetracker.wy-chan.repl.co",
+            "codeURL":"https://github.com/wy-chan/boilerplate-project-exercisetracker",
+            "tag":["All","Responsive","HTML","CSS","JavaScript","Backend","Express","MongoDB","Mongoose"],
+            "text":"This is an exercise tracker microservice API. (a freecodecamp.org project)"
+    },
+        {
             "image":"images/screen_ghjobs.png",
             "title":"Github Jobs",
             "demoURL":"https://wy-chan.github.io/devchallenges_GithubJobs/",

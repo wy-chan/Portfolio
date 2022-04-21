@@ -370,7 +370,7 @@ class Certificates extends React.Component{
             <section id="Certificates">
                 <p className="p-text">My certificates from online courses:</p>
 
-                <h3 className="cert-type">Web Development:</h3>
+                <h3 className="cert-type">Front End:</h3>
                 <div className="certGroup">
                 {(data[0])?
                 dataDev.map((item,index)=><li key={index}>{<CertBox certificates={item} />}</li>)
