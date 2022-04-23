@@ -869,7 +869,7 @@ width:334px;
 }
 .hobby-box{
     margin-top: 70px;
-    height: 250px;
+    height: 270px;
     text-align: center;
 }
 .hobby-box-ul{
@@ -878,22 +878,23 @@ width:334px;
 }
 .hobby-img{
     width: 250px;
-    height: 80px;
+    height: 100px;
     box-shadow: inset 2px 3px 6px 2px rgba(0, 0, 0, 0.25);
 border-radius: 4px;
+
 
 }
 .hobby-img1{
     background: url(images/hobby_art.png);
-    background-size: contain;
+    background-size: cover;
 }
 .hobby-img2{
     background: url(images/hobby_music.png);
-    background-size: contain;
+    background-size: cover;
 }
 .hobby-img3{
     background: url(images/hobby_cooking.png);
-    background-size: contain;
+    background-size: cover;
 }
 footer{
   color: #A09FB1;
