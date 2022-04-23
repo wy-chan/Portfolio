@@ -143,7 +143,47 @@
         "codeURL":"https://github.com/wy-chan/devchallenges_404notfoundpage/",
         "tag":["All","Responsive","HTML","CSS"],
         "text":"This page is a responsive 404 not found page. The design is from devchallenge.io"
-    }  
+    }, 
+    {
+        "image":"images/screen_timer.png",
+        "title":"a 25 + 5 Clock",
+        "demoURL":"https://codepen.io/wy-chan/full/YzZgYQQ",
+        "codeURL":"https://codepen.io/wy-chan/pen/YzZgYQQ",
+        "tag":["All","Responsive","HTML","CSS","JavaScript","React"],
+        "text":"This is a session + break timer. (freeCodeCamp.org project)"
+    }, 
+    {
+        "image":"images/screen_calculator.png",
+        "title":"JavaScript Calculator",
+        "demoURL":"https://codepen.io/wy-chan/full/poeqvgv",
+        "codeURL":"https://codepen.io/wy-chan/pen/poeqvgv",
+        "tag":["All","HTML","CSS","JavaScript","React"],
+        "text":"This is a calculator built with React. (freeCodeCamp.org project)"
+    },
+    {
+        "image":"images/screen_markdown.png",
+        "title":"Markdown Previewer",
+        "demoURL":"https://codepen.io/wy-chan/full/rNyKdGY",
+        "codeURL":"https://codepen.io/wy-chan/pen/rNyKdGY",
+        "tag":["All","Responsive","HTML","CSS","JavaScript","React"],
+        "text":"This previewer page can render markdown to HTML elements. (freeCodeCamp.org project)"
+    }, 
+    {
+        "image":"images/screen_randomquotefcc.png",
+        "title":"Random Quote Machine",
+        "demoURL":"https://codepen.io/wy-chan/full/xxqpMbW",
+        "codeURL":"https://codepen.io/wy-chan/pen/xxqpMbW",
+        "tag":["All","Responsive","HTML","CSS","JavaScript","jQuery"],
+        "text":"This is a random quote page. (freeCodeCamp.org project)"
+    },
+    {
+        "image":"images/screen_surveyform.png",
+        "title":"Customer Survey Form",
+        "demoURL":"https://codepen.io/wy-chan/full/ExNEGbm",
+        "codeURL":"https://codepen.io/wy-chan/pen/ExNEGbm",
+        "tag":["All","Responsive","HTML","CSS"],
+        "text":"This is a responsive customer survey form. (freeCodeCamp.org project)"
+    }   
     ],
     "certificates":[
         {
@@ -163,6 +203,15 @@
             "url":"https://devchallenges.io/certificates/T5xTGHabUqa0msEPpssB",
             "image":"images/cert_dc_fed.png",
             "type":"development"
+        },
+        {
+            "title":"Foundations of User Experience (UX) Design",
+            "organization":"Google",
+            "certID": "",
+            "date":"23-4-2022",
+            "url":"https://www.coursera.org/account/accomplishments/verify/NGLVXYEGZMFA",
+            "image":"images/cert_googleux1.png",
+            "type":"design"
         },
         {
             "title":"Photoshop 2021 Essential \n Training: The Basics",
