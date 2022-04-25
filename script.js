@@ -3,7 +3,7 @@ class MyApp extends React.Component{
     constructor(props){
       super(props);
       this.state={
-          currentPage: "AboutMe",
+          currentPage: "Welcome",
           firstLoad:true,
           headerSize:"Large",
           filterSize:"Small",
@@ -16,6 +16,9 @@ class MyApp extends React.Component{
           projectsSorted:[],
       }
       this.handlePageBtn=this.handlePageBtn.bind(this);
+      this.gotoPage=this.gotoPage.bind(this);
+      this.gotoCert=this.gotoCert.bind(this);
+      this.gotoAbout=this.gotoAbout.bind(this);
       this.handleFilterBar=this.handleFilterBar.bind(this);
       this.handleLanguage=this.handleLanguage.bind(this);
       this.handleLibrary=this.handleLibrary.bind(this);
@@ -34,7 +37,6 @@ class MyApp extends React.Component{
                 certificates:json.certificates,
                 projectsSorted:json.projects,
             })
-            console.log(this.state.certificates)
         });
         window.addEventListener("scroll", this.resizeHeaderOnScroll);
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -54,12 +56,18 @@ class MyApp extends React.Component{
     }
  
     handlePageBtn(event){
-         this.setState({
-            currentPage: event.target.text.replace(/\s/g, ''),
-         })
+        window.scrollTo({ top: 0, behavior: 'smooth' });
          if(event.target.text == "Pages"){
             this.setState({
                 filterSize:"Small"
+            })
+         }else if(this.state.currentPage == "Pages"){
+            this.setState({
+                currentLanguage:"All",
+                currentLibrary:"All",
+                selectLanguage:"All",
+                selectLibrary:"All",
+                projectsSorted:this.state.projects
             })
          }
          if(this.state.firstLoad == true){
@@ -67,7 +75,40 @@ class MyApp extends React.Component{
                  firstLoad: false,
              })
          }
-         window.scrollTo({ top: 0, behavior: 'smooth' });
+         this.setState({
+            currentPage: event.target.text.replace(/\s/g, ''),
+         })
+    }
+
+    gotoPage(){
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if(this.state.firstLoad == true){
+             this.setState({
+                 firstLoad: false,
+             })
+        }
+        if(this.state.filterSize == "Large"){
+            this.setState({
+                filterSize:"Small"
+            })
+        }
+        this.setState({
+            currentPage: "Pages",
+         })
+    }
+
+    gotoCert(){
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        this.setState({
+            currentPage: "Certificates",
+         })
+    }
+
+    gotoAbout(){
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        this.setState({
+            currentPage: "AboutMe",
+         })
     }
 
     handleFilterBar(){
@@ -148,11 +189,20 @@ class MyApp extends React.Component{
 
     const toPage = () => {
         switch(this.state.currentPage){
+            case "Welcome": return <Welcome 
+            firstLoad={this.state.firstLoad} 
+            projects={this.state.projects}   
+            handlePageBtn={this.handlePageBtn}
+            gotoPage={this.gotoPage}
+            />;
             case "Pages": return <Pages projects={this.state.projectsSorted}/>;
-            case "Layouts": return null;
+            case "AboutMe": return <AboutMe 
+            firstLoad={this.state.firstLoad}
+            certificates={this.state.certificates}
+            gotoCert={this.gotoCert}
+            />;
             case "Certificates": return <Certificates certificates={this.state.certificates}/>;
-            case "AboutMe": return <AboutMe firstLoad={this.state.firstLoad}/>;
-            default: return <Pages projects={this.state.projectsSorted}/>;
+            default: return <Welcome firstLoad={this.state.firstLoad} projects={this.state.projects}   handlePageBtn={this.handlePageBtn}/>;
         }
     }
 
@@ -160,7 +210,11 @@ class MyApp extends React.Component{
             <div>
                 <header className={headerClass}>
                     {showheader()}
-                    {(this.state.currentPage=="Pages")?showfilter():<div className="header-buffer"></div>}            
+                    {(this.state.currentPage=="Pages")?
+                    showfilter():
+                    (this.state.currentPage=="Certificates")?
+                    <TopBar gotoAbout={this.gotoAbout}/>:
+                    null}            
                 </header>
 
                 <main>
@@ -182,11 +236,9 @@ class HeaderLarge extends React.Component{
                 <div id="header-large" className="nav-bar">
                     <h1>Portfolio of <b>WY Chan</b></h1>
                     <ul className="nav-ul">
-                        <li className={liClass("AboutMe")}><a href="#about-me" className="nav-btn" onClick={this.props.handlePageBtn}>About Me</a></li>
-                        <li className={liClass("Layouts")}><a href="#layouts" className="nav-btn" onClick={this.props.handlePageBtn}>Layouts</a></li>
-                        <li className={liClass("Pages")}><a href="#pages" className="nav-btn" onClick={this.props.handlePageBtn}>Pages</a></li>
-                        <li className={liClass("Certificates")}><a href="#certificates" className="nav-btn" onClick={this.props.handlePageBtn}>Certificates</a></li>
-
+                        <li className={liClass("Welcome")}><a href="#welcome" className="nav-btn" value="Welcome" onClick={this.props.handlePageBtn}>Welcome</a></li>
+                        <li className={liClass("Pages")}><a href="#pages" className="nav-btn" value="Pages" onClick={this.props.handlePageBtn}>Pages</a></li>
+                        <li className={liClass("AboutMe")}><a href="#about-me" className="nav-btn" value="AboutMe" onClick={this.props.handlePageBtn}>About Me</a></li>
                     </ul>
                 </div>
         )
@@ -205,10 +257,9 @@ class HeaderLarge extends React.Component{
                 <div className="header-content">
                     <h1><b>WY Chan</b>'s Portfolio</h1>
                     <ul className="nav-ul">
-                    <li className={liClass("AboutMe")}><a href="#about-me" className="nav-btn" onClick={this.props.handlePageBtn}>About Me</a></li>
-                    <li className={liClass("Layouts")}><a href="#layouts" className="nav-btn" onClick={this.props.handlePageBtn}>Layouts</a></li>
-                    <li className={liClass("Pages")}><a href="#pages" className="nav-btn" onClick={this.props.handlePageBtn}>Pages</a></li>
-                    <li className={liClass("Certificates")}><a href="#certificates" className="nav-btn" onClick={this.props.handlePageBtn}>Certificates</a></li>
+                    <li className={liClass("Welcome")}><a href="#welcome" className="nav-btn" onClick={this.props.handlePageBtn}>Welcome</a></li>
+                        <li className={liClass("Pages")}><a href="#pages" className="nav-btn" onClick={this.props.handlePageBtn}>Pages</a></li>
+                        <li className={liClass("AboutMe")}><a href="#about-me" className="nav-btn" onClick={this.props.handlePageBtn}>About Me</a></li>
                     </ul>
                 </div>
             </div>
@@ -216,6 +267,142 @@ class HeaderLarge extends React.Component{
     }
  }
 
+ class Welcome extends React.Component{
+    constructor(props){
+      super(props);
+    }
+    render(){
+        let data=this.props.projects;
+        let classImg = (this.props.firstLoad)?"profile-img profile-img-anim":"profile-img";
+        let classSB = (this.props.firstLoad)?"speech-bubble speech-bubble-anim":"speech-bubble";
+        let classP1 = (this.props.firstLoad)?"p1 p1-anim":"p1";
+        let classP2 = (this.props.firstLoad)?"p2 p2-anim":"p2";
+        let classP3 = (this.props.firstLoad)?"p3 p3-anim":"p3";
+        let classP4 = (this.props.firstLoad)?"p4 p4-anim":"p4";
+        let classTriangle = (this.props.firstLoad)?"speech-bubble-triangle speech-bubble-triangle-anim":"speech-bubble-triangle";
+        let classAbout = (this.props.firstLoad)?"w-info w-info-anim":"w-info";
+
+        return(
+        <section id="welcome">
+                <div id="intro-box">
+                    <div className="profile-img-div">
+                    <div className={classImg}/>
+                    </div>
+                    <div className={classSB}>
+                        <div className="speech-bubble-p">
+                            <p className={classP1}>Welcome to my portfolio!</p>
+                            <p className={classP2}>My name is WY Chan.</p>
+                            <p className={classP3}>I am now self-learning and I hope to start</p>
+                            <p className={classP4}>my career in web design & development!</p>
+                        </div>
+                        <div className={classTriangle}></div>
+                    </div>
+                </div>
+                <div className={classAbout}>
+                        <div className="h6-div-div">
+                        <div className="h6-div h6-recent">
+                            <h6>Recent Projects</h6>  
+                        </div>
+                        </div>
+                        <div className="recent-content">
+                            <div className="recent-content-body">
+                             <p>In this portfolio are some projects I have done for online courses I have taken.</p>
+                                <div className="recent-page-gp recent-page-gp1">
+                                <div className="recent-page-gp-down">
+                                    <RecentPageBox projects={(data)?this.props.projects[0]:null}/>
+                                    </div>
+                                    <div>
+                                    <RecentPageBox projects={(data)?this.props.projects[1]:null}/>
+                                    </div>
+                                </div>
+                                <div className="recent-page-gp recent-page-gp2">
+                                <div className="recent-page-gp-down">
+                                    <RecentPageBox projects={(data)?this.props.projects[2]:null}/>
+                                    </div>
+                                    <a className="see-more-btn" onClick={this.props.gotoPage}>See More
+                                    <span class="material-icons">
+                                    arrow_forward
+                                    </span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="recent-content h6-div-div">
+                             <div className="h6-div">
+                            <h6>Contacts</h6>  
+                            </div>
+                        </div>
+                        <div className="contanct-div">
+                            <ul className="contact-ul">
+                                <li>
+                                    <span class="material-icons">
+                                    mail
+                                    </span>
+                                    <a className="c-text text-url" href="mailto: mailwychan@gmail.com"> mailwychan@gmail.com</a>
+                                </li>
+                                <li>
+                                    <img src="images/GitHub-Mark-32px.png"/>
+                                    <a className="c-text text-url" href="https://github.com/wy-chan" target="_blank"> @wy-chan</a>
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+        </section>
+        )
+    }
+}
+
+class RecentPageBox extends React.Component{
+    constructor(props){
+      super(props);
+    }
+    render(){
+        let data = this.props.projects;
+        let img = (data)?data["image"]:"";
+        let title = (data)?data["title"]:"...";
+        let text = (data)?data["text"]:"...";
+        let demoURL = (data)?data["demoURL"]:"...";
+        let codeURL = (data)?data["codeURL"]:"...";
+        return(
+                    <div className="pages-box-content page-recent">
+                        <div className="pages-img-box r-pages-img-box">
+                            <img className="r-pages-img" src={img}/> 
+                        </div>
+                        <h3>{title}</h3>
+                        <div className="pages-desc">
+                            <p className="p-text">{text}</p>
+                        </div>
+                        <div className="hidden-btn-div">
+                            <a href={demoURL} target="_blank" className="demo-btn demo-btn-r">See Demo</a> 
+                            <a href={codeURL} target="_blank" className="demo-btn code-btn-r">See Code</a>
+                        </div>
+                    </div>
+
+        )
+    }
+}  
+class TopBar extends React.Component{
+    constructor(props){
+      super(props);
+    }
+    render(){
+       
+
+        return(
+<div className="top-bar">
+<div className="top-bar-content">
+<a onClick={this.props.gotoAbout}>
+    <span className="material-icons">
+    chevron_left
+    </span>Back
+</a>
+<p>Courses / Certificates</p>
+</div>
+</div>
+)
+}
+}
  const Language = (props) => (props.currentLanguage == "All")? "All Languages" : props.currentLanguage;
  const Library = (props) => (props.currentLibrary == "All")? "All Libraries" : props.currentLibrary;
 
@@ -339,9 +526,9 @@ class PageBox extends React.Component{
         let codeURL = (data)?data["codeURL"]:"...";
         return(
                 <div className="pages-box">
-                    <div className="pages-box-content">
-                        <div className="pages-img-box">
-                            <img className="pages-img" src={img}/>
+                    <div className="pages-box-content pages-box-content-a">
+                        <div className="pages-img-box pages-img-box-a">
+                            <img className="pages-img pages-img-a" src={img}/>
                             <a href={codeURL} target="_blank" className="demo-btn code-btn">See Code</a>
                         </div>
                         <h3>{title}</h3>
@@ -364,11 +551,13 @@ class Certificates extends React.Component{
         let dataDev = this.props.certificates.filter(item => item.type == "development");
         let dataDesign = this.props.certificates.filter(item => item.type == "design");
         let dataBack = this.props.certificates.filter(item => item.type == "development-backend");
+        let dataapp = this.props.certificates.filter(item => item.type == "applications");
         let dataCode = this.props.certificates.filter(item => item.type == "coding");
-        
 
         return(
             <section id="Certificates">
+         
+
                 <p className="p-text">My certificates from online courses:</p>
 
                 <h3 className="cert-type">Front End:</h3>
@@ -389,6 +578,13 @@ class Certificates extends React.Component{
                 <div className="certGroup">
                 {(data[0])?
                 dataBack.map((item,index)=><li key={index}>{<CertBox certificates={item} />}</li>)
+                :null}
+                </div>
+                <hr />
+                <h3 className="cert-type">Tools:</h3>
+                <div className="certGroup">
+                {(data[0])?
+                dataapp.map((item,index)=><li key={index}>{<CertBox certificates={item} />}</li>)
                 :null}
                 </div>
                 <hr />
@@ -437,47 +633,32 @@ class AboutMe extends React.Component{
       super(props);
     }
     render(){
-        let classImg = (this.props.firstLoad)?"profile-img profile-img-anim":"profile-img";
-        let classSB = (this.props.firstLoad)?"speech-bubble speech-bubble-anim":"speech-bubble";
-        let classP1 = (this.props.firstLoad)?"p1 p1-anim":"p1";
-        let classP2 = (this.props.firstLoad)?"p2 p2-anim":"p2";
-        let classP3 = (this.props.firstLoad)?"p3 p3-anim":"p3";
-        let classP4 = (this.props.firstLoad)?"p4 p4-anim":"p4";
-        let classTriangle = (this.props.firstLoad)?"speech-bubble-triangle speech-bubble-triangle-anim":"speech-bubble-triangle";
-        let classAbout = (this.props.firstLoad)?"about-info about-info-anim":"about-info";
+        let data=this.props.certificates;
+        let dataDev = this.props.certificates.filter(item => item.type == "development");
+        let dataDesign = this.props.certificates.filter(item => item.type == "design");
+        let dataBack = this.props.certificates.filter(item => item.type == "development-backend");
+        let dataapp = this.props.certificates.filter(item => item.type == "applications");
+        let dataCode = this.props.certificates.filter(item => item.type == "coding");
 
         return(
             <section id="AboutMe">
-                <div id="intro-box">
-                    <div className="profile-img-div">
-                    <div className={classImg}/>
-                    </div>
-                    <div className={classSB}>
-                        <div className="speech-bubble-p">
-                            <p className={classP1}>Welcome to my portfolio!</p>
-                            <p className={classP2}>My name is WY Chan.</p>
-                            <p className={classP3}>I am self-studying web design & development.</p>
-                            <p className={classP4}>I hope to become a web designer!</p>
-                        </div>
-                        <div className={classTriangle}></div>
-                    </div>
-                </div>
-                <div className={classAbout}>
-                <div className="info-box-gp">
-                    <div className="info-box">
-                        <h3>Information</h3>
-                        <ul className="info-list">
-                            <li><b>• Name:</b> <span className="p-text1">WY Chan</span></li>
-                            <li><b>• Email:</b> <span className="p-text1">mailwychan@gmail.com</span></li>
+                       <ul className="info-list">
+                            <li><span className="p-text1 name-text">WY Chan</span></li>
+                            <li><b>• Email:</b> <a className="p-text1 text-url" href="mailto: mailwychan@gmail.com" >mailwychan@gmail.com</a></li>
                             <li><b>• Github:</b> <a className="p-text1 text-url" href="https://github.com/wy-chan" target="_blank">@wy-chan</a></li>
                             <li><b>• CodePen:</b> <a className="p-text1 text-url" href="https://codepen.io/wy-chan" target="_blank">@wy-chan</a></li>
-                        </ul>
-                    </div>
+                        </ul> 
+
+                
+                <div className="info-box-gp">
                     <div className="info-box exp-box">
-                        <h3>Experiences</h3>
-                        <p className="p-text1">Sorry, I have no related work experience, but I am willing to learn any new skills , knowledge, and applications related to web design and development.</p>
+                        <h3>About Me</h3>
+                        <p className="p-text1">I hope to become a web designer, but I have no related education and work experiences. Therefore, I started learning on my own using various online resources. I have taken some online courses that cover web design, UX/UI design, front-end development, and back-end development. This portfolio includes projects I have done in the online courses I have taken.
+                        </p>
+                        <p className="p-text1">Thank you for viewing my portfolio!</p>
                     </div>
                 </div>
+
                 <p className="p-text skill-p">Here is a self-evaluation of my skills at design & development applications:</p>
                 <div className="info-box-gp">
                     <div className="info-box skill-box">
@@ -534,6 +715,71 @@ class AboutMe extends React.Component{
                     </div>
                 </div>
                 <div className="info-box-gp">
+                    <div className="info-box cert-box-small">
+                        <h3>Course / Certificates</h3>
+                        <p>Recent Courses / Certificates:</p>
+                        <ul className="cert-box-small-ul">
+                        <li >
+                        <h3 className="cert-small-h3">Front End:</h3>
+                        <a className="cert-small-li-box" href={(data)?dataDev[0].url:null} target="_blank">
+                            <img className="cer-img-small" src={(data)?dataDev[0].image:null}/>
+                            <div className="cert-box-text cert-box-text-small">
+                                <h5>{(data)?dataDev[0].organization:null}</h5>
+                                <h4>{(data)?dataDev[0].title:null}</h4>
+                            </div>
+                        </a>
+                        </li>
+                        <li >
+                        <h3 className="cert-small-h3">Design:</h3>
+                        <a className="cert-small-li-box" href={(data)?dataDesign[0].url:null} target="_blank">
+                            <img className="cer-img-small" src={(data)?dataDesign[0].image:null}/>
+                            <div className="cert-box-text cert-box-text-small">
+                                <h5>{(data)?dataDesign[0].organization:null}</h5>
+                                <h4>{(data)?dataDesign[0].title:null}</h4>
+                            </div>
+                        </a>
+                        </li>
+                        <li >
+                        <h3 className="cert-small-h3">Back End:</h3>
+                        <a className="cert-small-li-box" href={(data)?dataBack[0].url:null} target="_blank">
+                            <img className="cer-img-small" src={(data)?dataBack[0].image:null}/>
+                            <div className="cert-box-text cert-box-text-small">
+                                <h5>{(data)?dataBack[0].organization:null}</h5>
+                                <h4>{(data)?dataBack[0].title:null}</h4>
+                            </div>
+                        </a>
+                        </li>
+                        <li >
+                        <h3 className="cert-small-h3">Tools:</h3>
+                        <a className="cert-small-li-box" href={(data)?dataapp[0].url:null} target="_blank">
+                            <img className="cer-img-small" src={(data)?dataapp[0].image:null}/>
+                            <div className="cert-box-text cert-box-text-small">
+                                <h5>{(data)?dataapp[0].organization:null}</h5>
+                                <h4>{(data)?dataapp[0].title:null}</h4>
+                            </div>
+                        </a>
+                        </li>
+                        <li >
+                        <h3 className="cert-small-h3">Coding:</h3>
+                        <a className="cert-small-li-box" href={(data)?dataCode[0].url:null} target="_blank">
+                            <img className="cer-img-small" src={(data)?dataCode[0].image:null}/>
+                            <div className="cert-box-text cert-box-text-small">
+                                <h5>{(data)?dataCode[0].organization:null}</h5>
+                                <h4>{(data)?dataCode[0].title:null}</h4>
+                            </div>
+                        </a>
+                        </li>
+                        <li className="see-more-btn-li">
+                            <a className="see-more-btn-cert" onClick={this.props.gotoCert}>See More
+                                    <span class="material-icons">
+                                    arrow_forward
+                                    </span>
+                                    </a>   
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="info-box-gp">
                     <div className="info-box hobby-box">
                         <h3>My Hobbies</h3>
                         <ul className="hobby-box-ul">
@@ -552,11 +798,11 @@ class AboutMe extends React.Component{
                         </ul>
                     </div>
                 </div>
-                </div>
+
             </section>
         )
     }
 }
-    
+
 
 ReactDOM.render(<MyApp />, document.getElementById('myApp'));
