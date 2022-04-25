@@ -308,7 +308,7 @@ class HeaderLarge extends React.Component{
                             <div className="recent-content-body">
                              <p>In this portfolio are some projects I have done for online courses I have taken.</p>
                                 <div className="recent-page-gp recent-page-gp1">
-                                <div className="recent-page-gp-down">
+                                <div >
                                     <RecentPageBox projects={(data)?this.props.projects[0]:null}/>
                                     </div>
                                     <div>
@@ -316,7 +316,7 @@ class HeaderLarge extends React.Component{
                                     </div>
                                 </div>
                                 <div className="recent-page-gp recent-page-gp2">
-                                <div className="recent-page-gp-down">
+                                <div >
                                     <RecentPageBox projects={(data)?this.props.projects[2]:null}/>
                                     </div>
                                     <a className="see-more-btn" onClick={this.props.gotoPage}>See More
@@ -714,9 +714,9 @@ class AboutMe extends React.Component{
                         </ul>
                     </div>
                 </div>
-                <div className="info-box-gp">
+                <div className="info-box-gp"> 
                     <div className="info-box cert-box-small">
-                        <h3>Course / Certificates</h3>
+                        <h3>Courses / Certificates</h3>
                         <p>Recent Courses / Certificates:</p>
                         <ul className="cert-box-small-ul">
                         <li >
