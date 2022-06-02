@@ -470,6 +470,7 @@ class FilterLarge extends React.Component{
                                <li className={libClass("jQuery")}><button value="jQuery" className="filter-btn" onClick={this.props.handleLibrary}>jQuery</button></li>
                                <li className={libClass("React")}><button value="React" className="filter-btn" onClick={this.props.handleLibrary}>React</button></li>
                                <li className={libClass("BootStrap")}><button value="BootStrap" className="filter-btn" onClick={this.props.handleLibrary}>BootStrap</button></li>
+                               <li className={libClass("D3")}><button value="D3" className="filter-btn" onClick={this.props.handleLibrary}>D3</button></li>
                            </ul>
                         </div>
                     </div>
@@ -581,7 +582,7 @@ class Certificates extends React.Component{
                 :null}
                 </div>
                 <hr />
-                <h3 className="cert-type">Tools:</h3>
+                <h3 className="cert-type">Design Tools:</h3>
                 <div className="certGroup">
                 {(data[0])?
                 dataapp.map((item,index)=><li key={index}>{<CertBox certificates={item} />}</li>)

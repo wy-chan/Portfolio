@@ -1,6 +1,14 @@
 {
     "projects":[
         {
+            "image":"images/screen_luckydraw.png",
+            "title":"Lucky Draw Tool",
+            "demoURL":"https://wy-chan.github.io/lucky_draw",
+            "codeURL":"https://github.com/wy-chan/lucky_draw",
+            "tag":["All","Responsive","HTML","CSS","JavaScript","React"],
+            "text":"This is a lucky draw page suitable for lucky draw in parties."
+    },
+        {
             "image":"images/screen_filemetadata.png",
             "title":"File Metadata",
             "demoURL":"https://boilerplate-project-filemetadata.wy-chan.repl.co/",
@@ -143,6 +151,30 @@
         "codeURL":"https://github.com/wy-chan/devchallenges_404notfoundpage/",
         "tag":["All","Responsive","HTML","CSS"],
         "text":"This page is a responsive 404 not found page. The design is from devchallenge.io"
+    }, 
+    {
+        "image":"images/screen_heatmap.png",
+        "title":"Heat Map",
+        "demoURL":"https://codepen.io/wy-chan/full/vYmgXdP",
+        "codeURL":"https://codepen.io/wy-chan/pen/vYmgXdP",
+        "tag":["All","Responsive","HTML","CSS","JavaScript","D3"],
+        "text":"This is a heatmap visualising temperature data. (freeCodeCamp.org project)"
+    }, 
+    {
+        "image":"images/screen_scatterplotgraph.png",
+        "title":"Scatterplot Graph",
+        "demoURL":"https://codepen.io/wy-chan/full/OJmbrzP",
+        "codeURL":"https://codepen.io/wy-chan/pen/OJmbrzP",
+        "tag":["All","Responsive","HTML","CSS","JavaScript","D3"],
+        "text":"This is a scatterplot graph visualising doping data. (freeCodeCamp.org project)"
+    }, 
+    {
+        "image":"images/screen_barchart.png",
+        "title":"Bar Chart",
+        "demoURL":"https://codepen.io/wy-chan/full/mdmEmOB",
+        "codeURL":"https://codepen.io/wy-chan/pen/mdmEmOB",
+        "tag":["All","Responsive","HTML","CSS","JavaScript","D3"],
+        "text":"This is a bar chart visualising GDP data. (freeCodeCamp.org project)"
     }, 
     {
         "image":"images/screen_timer.png",
